@@ -16,6 +16,7 @@
 		<File Path="LICENSE.md" />
 		<File Path="README.md" />
 	</Folder>
-	<Project Path="src/core.csproj" />
+	<Project Path="src/core/core.csproj" />
+	<Project Path="src/data/core.data.csproj" />
 	<Project Path="test/core.tests.csproj" />
 </Solution>
