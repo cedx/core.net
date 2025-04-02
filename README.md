@@ -8,12 +8,12 @@ implemented in [C#](https://learn.microsoft.com/en-us/dotnet/csharp).
 > **Use at your own risk!** No support will be provided.
 
 ## Documentation
-- [User guide](https://github.com/cedx/core/wiki)
-- [Examples](https://github.com/cedx/core/tree/main/example)
+- [User guide](https://github.com/cedx/core.net/wiki)
+- [Examples](https://github.com/cedx/core.net/tree/main/example)
 
 ## Development
-- [Git repository](https://github.com/cedx/core)
-- [Submit an issue](https://github.com/cedx/core/issues)
+- [Git repository](https://github.com/cedx/core.net)
+- [Submit an issue](https://github.com/cedx/core.net/issues)
 
 ## License
-[Belin.io Core](https://github.com/cedx/core) is distributed under the MIT License.
+[Belin.io Core](https://github.com/cedx/core.net) is distributed under the MIT License.
