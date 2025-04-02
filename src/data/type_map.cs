@@ -13,9 +13,8 @@ public class ColumnAttributeTypeMap<T>(): SqlMapper.ITypeMap {
 	/// <summary>
 	/// The custom type map used to find the properties annotated with a <see cref="ColumnAttribute"/> attribute.
 	/// </summary>
-	private readonly CustomPropertyTypeMap customMapper = new(
-		typeof(T),
-		(type, column) => type.GetProperties().FirstOrDefault(property => property.GetCustomAttribute<ColumnAttribute>()?.Name == column)!
+	private readonly CustomPropertyTypeMap customMapper = new(typeof(T), (type, column) =>
+		type.GetProperties().FirstOrDefault(property => property.GetCustomAttribute<ColumnAttribute>()?.Name == column)!
 	);
 
 	/// <summary>
