@@ -1,4 +1,4 @@
-namespace Belin.Core.Json;
+namespace Belin.Core.Text.Json;
 
 using System.Text.Json;
 using System.Text.Json.Serialization;

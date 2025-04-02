@@ -17,6 +17,6 @@
 		<File Path="README.md" />
 	</Folder>
 	<Project Path="src/core/core.csproj" />
-	<Project Path="src/data/core.data.csproj" />
+	<Project Path="src/core.data.dapper/core.data.dapper.csproj" />
 	<Project Path="test/core.tests.csproj" />
 </Solution>

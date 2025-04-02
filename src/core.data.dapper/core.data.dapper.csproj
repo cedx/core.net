@@ -9,7 +9,7 @@
 
 	<PropertyGroup>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-		<AssemblyName>Belin.Core.Dapper</AssemblyName>
+		<AssemblyName>Belin.Core.Data.Dapper</AssemblyName>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<OutDir>../../bin</OutDir>
