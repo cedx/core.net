@@ -1,4 +1,4 @@
-namespace Belin.Core.Text.Json;
+namespace Belin.Core.Text.Json.Serialization;
 
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -9,7 +9,7 @@ using System.Text.Json.Serialization;
 /// <param name="trueString">The string representing the boolean value <see langword="true"/>.</param>
 /// <param name="falseString">The string representing the boolean value <see langword="false"/>.</param>
 [AttributeUsage(AttributeTargets.Property)]
-public class JsonBooleanAttribute(string trueString = "True", string falseString = "False"): JsonConverterAttribute {
+public class JsonBooleanStringAttribute(string trueString = "True", string falseString = "False"): JsonConverterAttribute {
 
 	/// <summary>
 	/// The string representing the boolean value <see langword="false"/>.
@@ -29,7 +29,7 @@ public class JsonBooleanAttribute(string trueString = "True", string falseString
 	/// <exception cref="ArgumentOutOfRangeException">The type to convert is not a <see cref="string"/>.</exception>
 	public override JsonConverter<string> CreateConverter(Type typeToConvert) {
 		if (typeToConvert != typeof(string)) throw new ArgumentOutOfRangeException(nameof(typeToConvert));
-		return new JsonBooleanConverter(TrueString, FalseString);
+		return new JsonBooleanStringConverter(TrueString, FalseString);
 	}
 
 	/// <summary>
@@ -37,7 +37,7 @@ public class JsonBooleanAttribute(string trueString = "True", string falseString
 	/// </summary>
 	/// <param name="trueString">The string representing the boolean value <see langword="true"/>.</param>
 	/// <param name="falseString">The string representing the boolean value <see langword="false"/>.</param>
-	private class JsonBooleanConverter(string trueString, string falseString): JsonConverter<string> {
+	private class JsonBooleanStringConverter(string trueString, string falseString): JsonConverter<string> {
 
 		/// <summary>
 		/// Reads and converts the boolean value to a string.
