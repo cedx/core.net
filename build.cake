@@ -13,12 +13,13 @@ Task("build")
 Task("clean")
 	.Description("Deletes all generated files.")
 	.Does(() => EnsureDirectoryDoesNotExist("bin"))
-	.DoesForEach(GetDirectories("*/obj"), EnsureDirectoryDoesNotExist)
+	.DoesForEach(GetDirectories("**/obj"), EnsureDirectoryDoesNotExist)
 	.Does(() => CleanDirectory("var", fileSystemInfo => fileSystemInfo.Path.Segments[^1] != ".gitkeep"));
 
 Task("format")
 	.Description("Formats the source code.")
-	.DoesForEach(["src", "test"], project => DotNetFormat(project));
+	.DoesForEach(GetDirectories("*/src"), project => DotNetFormat(project.FullPath))
+	.Does(() => DotNetFormat("test"));
 
 Task("publish")
 	.Description("Publishes the package.")
@@ -32,7 +33,7 @@ Task("test")
 
 Task("version")
 	.Description("Updates the version number in the sources.")
-	.DoesForEach(GetFiles("*/*.csproj"), file => ReplaceInFile(file, @"<Version>\d+(\.\d+){2}</Version>", $"<Version>{version}</Version>"));
+	.DoesForEach(GetFiles("**/*.csproj"), file => ReplaceInFile(file, @"<Version>\d+(\.\d+){2}</Version>", $"<Version>{version}</Version>"));
 
 Task("default")
 	.Description("The default task.")
