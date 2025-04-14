@@ -1,7 +1,6 @@
 <Solution>
 	<Project Path="src/Core/Core.csproj" />
 	<Project Path="src/Core.Data/Core.Data.csproj" />
-	<Project Path="src/Core.Drawing/Core.Drawing.csproj" />
 	<Project Path="test/Core.Tests.csproj">
 		<Build Solution="Release|*" Project="false" />
 	</Project>

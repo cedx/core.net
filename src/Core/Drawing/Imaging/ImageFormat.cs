@@ -1,8 +1,11 @@
-namespace Belin.Core.Drawing;
+namespace Belin.Core.Drawing.Imaging;
+
+using System.Text.Json.Serialization;
 
 /// <summary>
 /// Defines the format of an image.
 /// </summary>
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum ImageFormat {
 
 	/// <summary>
