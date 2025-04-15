@@ -26,8 +26,8 @@ Task("publish")
 	.WithCriteria(release, @"the ""Release"" configuration must be enabled")
 	.IsDependentOn("default")
 	.Does(() => DotNetPack("Core.slnx", new() { OutputDirectory = "var" }))
-	.DoesForEach(GetFiles("var/*.nupkg"), file => DotNetNuGetPush(file, new() { ApiKey = EnvironmentVariable("NUGET_API_KEY"), Source = "https://api.nuget.org/v3/index.json" }))
-	.DoesForEach(GetFiles("var/*.nupkg"), file => DotNetNuGetPush(file, new() { ApiKey = EnvironmentVariable("GITHUB_TOKEN"), Source = "https://nuget.pkg.github.com/mc2it/index.json" }))
+	.DoesForEach(() => GetFiles("var/*.nupkg"), file => DotNetNuGetPush(file, new() { ApiKey = EnvironmentVariable("NUGET_API_KEY"), Source = "https://api.nuget.org/v3/index.json" }))
+	.DoesForEach(() => GetFiles("var/*.nupkg"), file => DotNetNuGetPush(file, new() { ApiKey = EnvironmentVariable("GITHUB_TOKEN"), Source = "https://nuget.pkg.github.com/mc2it/index.json" }))
 	.DoesForEach(["tag", "push origin"], action => StartProcess("git", $"{action} v{version}"));
 
 Task("test")
