@@ -1,6 +1,5 @@
-namespace Belin.Core.Data;
+namespace Belin.Core.Data.Mapping;
 
-using Dapper;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
 

@@ -16,10 +16,8 @@ public class JsonIPAddressConverter(): JsonConverter<IPAddress> {
 	/// <param name="typeToConvert">The type to convert.</param>
 	/// <param name="options">An object that specifies serialization options to use.</param>
 	/// <returns>The converted value.</returns>
-	public override IPAddress? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) {
-		var value = reader.GetString();
-		return value is not null ? IPAddress.Parse(value) : null;
-	}
+	public override IPAddress? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+		reader.GetString() is string value ? IPAddress.Parse(value) : null;
 
 	/// <summary>
 	/// Writes the specified IP address as a string.
