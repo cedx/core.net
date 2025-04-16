@@ -1,5 +1,6 @@
 namespace Belin.Core.Drawing.Imaging;
 
+using System.Net.Mime;
 using System.Text.Json.Serialization;
 
 /// <summary>
@@ -32,4 +33,18 @@ public enum ImageFormat {
 	/// The image format is WebP.
 	/// </summary>
 	WebP
+}
+
+/// <summary>
+/// Provides extension methods for image formats.
+/// </summary>
+public static class ImageFormatExtensions {
+
+	/// <summary>
+	/// Gets the media type corresponding to the specified image format.
+	/// </summary>
+	/// <param name="imageFormat">The image format.</param>
+	/// <returns>The media type corresponding to the specified image format.</returns>
+	public static string GetMediaType(this ImageFormat imageFormat) =>
+		$"image/{imageFormat.ToString().ToLowerInvariant()}";
 }
