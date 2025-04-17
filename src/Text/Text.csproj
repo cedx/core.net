@@ -9,10 +9,12 @@
 
 	<PropertyGroup>
 		<Authors>CedX</Authors>
+		<IncludeSymbols>true</IncludeSymbols>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>belin;client;core;framework;library;server;ui</PackageTags>
 		<RepositoryUrl>https://github.com/cedx/core.net.git</RepositoryUrl>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
 
 	<PropertyGroup>
