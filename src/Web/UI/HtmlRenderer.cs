@@ -1,6 +1,8 @@
 namespace Belin.Core.Web.UI;
 
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Web = Microsoft.AspNetCore.Components.Web;
 
 /// <summary>
