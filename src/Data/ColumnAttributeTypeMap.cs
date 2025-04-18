@@ -1,4 +1,4 @@
-namespace Belin.Core.Data.Mapping;
+namespace Belin.Core.Data;
 
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;

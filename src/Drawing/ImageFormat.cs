@@ -1,6 +1,5 @@
-namespace Belin.Core.Drawing.Imaging;
+namespace Belin.Core.Drawing;
 
-using System.Net.Mime;
 using System.Text.Json.Serialization;
 
 /// <summary>
@@ -45,6 +44,5 @@ public static class ImageFormatExtensions {
 	/// </summary>
 	/// <param name="imageFormat">The image format.</param>
 	/// <returns>The media type corresponding to the specified image format.</returns>
-	public static string GetMediaType(this ImageFormat imageFormat) =>
-		$"image/{imageFormat.ToString().ToLowerInvariant()}";
+	public static string GetMediaType(this ImageFormat imageFormat) => $"image/{imageFormat.ToString().ToLowerInvariant()}";
 }
