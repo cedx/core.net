@@ -1,4 +1,4 @@
-namespace Belin.Core.Drawing;
+namespace Belin.Core.Drawing.Imaging;
 
 using System.Text.Json.Serialization;
 
