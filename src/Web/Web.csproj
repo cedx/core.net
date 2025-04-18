@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<Company>Belin.io</Company>
+		<Copyright>© Cédric Belin</Copyright>
+		<Description>Base library of Cédric Belin, full stack developer.</Description>
+		<Product>Belin.io Core</Product>
+		<Version>0.2.0</Version>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>CedX</Authors>
+		<IncludeSymbols>true</IncludeSymbols>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>belin;client;core;framework;library;server;ui</PackageTags>
+		<RepositoryUrl>https://github.com/cedx/core.net.git</RepositoryUrl>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AssemblyName>Belin.Core.Web</AssemblyName>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutDir>../../bin</OutDir>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../README.md" Pack="true" PackagePath="/" />
+	</ItemGroup>
+</Project>

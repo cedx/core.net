@@ -2,6 +2,7 @@
 	<Project Path="src/Data/Data.csproj" />
 	<Project Path="src/Drawing/Drawing.csproj" />
 	<Project Path="src/Text/Text.csproj" />
+	<Project Path="src/Web/Web.csproj" />
 	<Project Path="test/Tests.csproj">
 		<Build Solution="Release|*" Project="false" />
 	</Project>
