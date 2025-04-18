@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Web = Microsoft.AspNetCore.Components.Web;
 
 /// <summary>
-/// Provides a mechanism for rendering components non-interactively as HTML markup.
+/// Provides a mechanism for rendering Razor components non-interactively as HTML markup.
 /// </summary>
 /// <param name="serviceProvider">The service provider.</param>
 public class HtmlRenderer(IServiceProvider serviceProvider) {
